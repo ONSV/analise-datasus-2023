@@ -1,6 +1,6 @@
 ---
 title: "Dados Consolidados de Óbitos no Trânsito Brasileiro - 2023"
-format: 
+format:
   onsvpub-html:
     echo: false
     fig-width: 6
@@ -55,7 +55,8 @@ plot_anual_abs <- ggplot(mortes_ano_decada, aes(x = ano_ocorrencia, y = n)) +
     panel.border = element_blank(),
     axis.ticks = element_blank()
   ) +
-  geom_text(aes(label = n), nudge_y = -1200, size = 3, color = "white")
+  geom_text(aes(label = n), nudge_y = -1200, size = 5, color = "white")
+
 
 p1 <- ggplotly(plot_anual_abs, tooltip = NULL)
 p1
@@ -182,6 +183,7 @@ var_uf <- mortes_uf |>
     )
   )
 
+
 p1 <- ggplot(var_uf, aes(x = nome_uf_ocor, y = ano_2022)) +
   geom_col(fill = onsv_palette$blue, aes(text = text_2022)) +
   coord_flip() + 
@@ -273,10 +275,10 @@ subplot(
 
 Considerando o modo de transporte em que a vítima se encontrava durante o sinistro, os modais com **maiores aumentos percentuais entre** 2022 e 2023 foram os modais:
 
-- Triciclo: 37,50%;
-- Bicicleta: 12,18%;
-- Motocicleta: 11,77%;
-- Pedestre: 5,10%
+-   Triciclo: 37,50%;
+-   Bicicleta: 12,18%;
+-   Motocicleta: 11,77%;
+-   Pedestre: 5,10%
 
 O modal **Ônibus** apresentou uma redução de 15,87% e a classificação **Outros** apresentou uma redução de 13,99%.
 
@@ -331,7 +333,7 @@ Por fim, considerando o sexo das vítimas, em 2023 as vítimas do sexo masculino
 
 Considerando apenas as vítimas fatais do sexo feminino, a faixa etária com maior aumento de mortes entre 2022 e 2023 foi entre 65 a 69 anos, com uma variação de **28%.** A faixa etária com a maior redução foi a de 70 a 74 anos, atingindo uma variação de **-8%.**
 
-Considerando as vítimas fatais do sexo masculino, a faixa etária com o maior aumento de mortes entre 2022 e 2023 foi a de acima de 80 anos, com uma variação de **12%**. A faixa etária com a maior redução se deu entre  45 a 49 anos, com uma variação de **-1%**.
+Considerando as vítimas fatais do sexo masculino, a faixa etária com o maior aumento de mortes entre 2022 e 2023 foi a de acima de 80 anos, com uma variação de **12%**. A faixa etária com a maior redução se deu entre 45 a 49 anos, com uma variação de **-1%**.
 
 ```{r}
 obitos_piramide <- rtdeaths_tbl |> 
@@ -416,7 +418,10 @@ plot_faixas_modais <- tbl_faixas_modais |>
     panel.grid = element_blank(),
     panel.border = element_blank(),
     axis.ticks = element_blank(),
-    legend.position = "none"
+    legend.position = "none",
+    axis.text.x = element_text(size = 7), 
+    axis.text.y = element_text(size = 7, margin = margin(r = 3)),
+    axis.title.x = element_text(size = 8)
   ) +
   labs(x = "Faixa etária", y = NULL) +
   scale_x_discrete(
