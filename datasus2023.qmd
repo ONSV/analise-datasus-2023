@@ -7,9 +7,9 @@ format:
     fig-height: 3.7
     fig-dpi: 300
 author: 
-  - name: Pedro Augusto Borges dos Santos
+  - name: Jorge Tiago Bastos
     affiliations : Observatório Nacional de Segurança Viária
-  - name: João Pedro Melani Saraiva
+  - name: Paloma Eleuterio
 date: last-modified
 ---
 
