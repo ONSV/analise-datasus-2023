@@ -7,7 +7,8 @@ format:
     fig-height: 3.7
     fig-dpi: 300
 author: 
-  - name: Jorge Tiago Bastos
+  - name: Dr. Jorge Tiago Bastos
+    orcid: 0000-0001-6447-1504s
     affiliations : Observatório Nacional de Segurança Viária
   - name: Paloma Eleuterio
 date: last-modified
