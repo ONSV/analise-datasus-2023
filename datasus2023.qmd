@@ -55,7 +55,7 @@ plot_anual_abs <- ggplot(mortes_ano_decada, aes(x = ano_ocorrencia, y = n)) +
     panel.border = element_blank(),
     axis.ticks = element_blank()
   ) +
-  geom_text(aes(label = n), nudge_y = -1200, size = 5, color = "white")
+  geom_text(aes(label = n), nudge_y = -1200, size = 3, color = "white")
 
 
 p1 <- ggplotly(plot_anual_abs, tooltip = NULL)
@@ -97,7 +97,7 @@ p2
 
 # Óbitos por regiões
 
-Considerando as macroregiões do Brasil, o **Nordeste** apresentou o **maior aumento percentual** de óbitos no trânsito, atingindo **8,39%**. Em ordem decrescente, segue a Região **Sudeste** com um aumento de **2,30%** e a Região **Centro-Oeste** com **1,36%**. As Regiões **Sul** e **Norte** registraram uma redução nos óbitos por sinistros de trânsito, com decréscimos de **1,87%** e **0,87%**, respectivamente.
+Considerando as macroregiões do Brasil, o **Nordeste** apresentou o **maior aumento percentual** de óbitos no trânsito, atingindo **8,40%**. Em ordem decrescente, segue a Região **Sudeste** com um aumento de **2,30%** e a Região **Centro-Oeste** com **1,36%**. As Regiões **Sul** e **Norte** registraram uma redução nos óbitos por sinistros de trânsito, com decréscimos de **1,87%** e **0,87%**, respectivamente.
 
 ```{r}
 var_regiao <- rtdeaths_tbl |> 
@@ -420,7 +420,7 @@ plot_faixas_modais <- tbl_faixas_modais |>
     axis.ticks = element_blank(),
     legend.position = "none",
     axis.text.x = element_text(size = 7), 
-    axis.text.y = element_text(size = 7, margin = margin(r = 3)),
+    axis.text.y = element_text(size = 7, margin = margin(r = 5)),
     axis.title.x = element_text(size = 8)
   ) +
   labs(x = "Faixa etária", y = NULL) +
