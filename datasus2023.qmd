@@ -400,9 +400,9 @@ gt_piramide <- tbl_piramide |>
 gt_piramide
 ```
 
-# Faixa etária e modais da vítimas
+# Faixa etária e modos de transporte da vítimas
 
-Observando os óbitos com base no mod0 e na faixa etária das vítimas, de forma conjunta, percebe-se que a grande maioria dos óbitos ocorrem entre os ocupantes de motocicleta entre 20 e 24 anos.
+Observando os óbitos com base no modo e na faixa etária das vítimas, de forma conjunta, percebe-se que a grande maioria dos óbitos ocorrem entre os ocupantes de motocicleta entre 20 e 24 anos.
 
 ```{r}
 tbl_faixas_modais <- rtdeaths_tbl |> 
